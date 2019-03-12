@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>JavaScript Coin Flip</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/styleflip.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <div id="wrapper">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <h1>Digital Toss ||What's Your Pick??</h1>
+          </div>
+
+          <!--blank-->
+          <div class="col-lg-4">
+            <!--coin -->
+            <div class="coinBox" id="sel1">
+              <div class="head">
+                <!-- removed flip class to stop animation -->
+                <img src="images/heads.png" />
+              </div>
+              <div class="tail">
+                <!-- removed flip class to stop animation -->
+                <img src="images/tails.png" />
+              </div>
+              <div id="result"></div>
+            </div>
+          </div>
+
+          <!--result form elements -->
+          <div class="col-lg-4">
+            <form>
+              <p>
+                <select
+                  class="form-control"
+                  id="userSelect"
+                  onchange="getChoice()"
+                >
+                  <option value="">Select your Side</option>
+                  <option value="Head">HEAD </option>
+                  <option value="Tail">TAIL</option>
+                </select>
+              </p>
+              <p>
+                <button class="btn btn-lg btn-primary" id="btnFlip">
+                  Flip It
+                </button>
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/flip.js"></script>
+  </body>
+</html>

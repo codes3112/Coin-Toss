@@ -1,0 +1,65 @@
+ 
+html,body{
+width:100%;
+min-height:100%;
+padding:0;
+margin:0;
+background:url("../images/goldbg.jpg");
+background-size:covered;
+}
+#wrapper{
+width:100%;
+height:auto;
+min-height:500px;
+}
+.container{
+padding:150px 0px;
+text-align:center;}
+h1{
+margin-bottom:100px;
+}
+.tail{
+margin-top:-300px;
+}
+.flip img
+{
+	animation:flipIt 0.50s linear infinite;
+}
+.tail img{
+	animation-delay:0.25s;
+}
+
+@keyframes flipIt{
+	0%{width:0px;height:300px;}
+	25%{width:300px;height:300px;}
+    50%{width:0px;height:300px;}
+	   
+	100%{width:0px;height:300px;}
+}
+.hideme
+{
+	animation:hideme 3s 1;
+	-webkit-animation:hideme 3s 1;
+	/*duration of fading and repition */
+	animation-fill-mode:forwards;
+	animation-delay:2/*safari and chrome */
+	-webkit-animation-fill-mode:backwards;
+	/*end by showing the content */
+}
+@keyframes hideme{
+	0%{
+		opacity:1;
+	}
+	10%{
+		opacity:0.1;
+	}
+	50%{
+		opacity:0;
+	}
+	90%{
+		opacity:0;
+	}
+	100%{
+		opacity:1;
+	}
+}
